@@ -7,7 +7,8 @@
 
     - name: Update using apt-get 
       apt:  update_cache=yes
-      apt:  name=python-pip state=present
+      shell: apt-get install python-pip
+      #apt:  name=python-pip state=present
       when: ansible_os_family == "Ubuntu"
 
     - name: Install Perequisite
