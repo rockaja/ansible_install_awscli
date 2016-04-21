@@ -11,8 +11,8 @@
       when: ansible_os_family == "Ubuntu"
 
     - name: Install python-pip using apt-get 
-      shell: curl -O https://bootstrap.pypa.io/get-pip.py
-      shell: sudo python get-pip.py
+      shell: curl -O https://bootstrap.pypa.io/get-pip.py ./get-pip.py
+      shell: sudo python ./get-pip.py
       #apt:  name=python-pip state=present
 
     - name: Install Perequisite
