@@ -11,6 +11,11 @@
       #apt:  name=python-pip state=present
       when: ansible_os_family == "Ubuntu"
 
+    - name: Install python-pip using apt-get 
+      shell: curl -O https://bootstrap.pypa.io/get-pip.py
+      shell: sudo python get-pip.py
+      #apt:  name=python-pip state=present
+
     - name: Install Perequisite
       shell: pip install awscli --ignore-installed six
       shell: pip install aws-shell
