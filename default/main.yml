@@ -17,3 +17,8 @@
 
     - name: Install Perequisite
       shell: pip install awscli --ignore-installed six
+      shell: pip install aws-shell
+
+    - name: Export AWS Enviromental Variables
+      shell: export AWS_ACCESS_KEY_ID=AKIAIV2WMVKEQGS7ATBA
+      shell: export AWS_SECRET_ACCESS_KEY=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
