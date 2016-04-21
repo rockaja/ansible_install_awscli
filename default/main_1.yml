@@ -11,8 +11,8 @@
       when: ansible_os_family == "Ubuntu"
 
     - name: Install python-pip using apt-get 
-      shell: curl -O https://bootstrap.pypa.io/get-pip.py | python get-pip.py
-      #apt:  name=python-pip state=present
+      #shell: curl -O https://bootstrap.pypa.io/get-pip.py | python get-pip.py
+      apt:  name=python-pip state=present
 
     - name: Install Perequisite
       shell: pip install awscli --ignore-installed six
