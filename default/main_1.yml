@@ -5,17 +5,10 @@
 
     tasks:
 
-    - name: Update using apt-get Install unzip and python pip
+    - name: Update using apt-get 
       apt:  update_cache=yes
-      when: ansible_os_family == "Ubuntu"
-
-    - name: Install python pip
       apt:  name=python-pip state=present
       when: ansible_os_family == "Ubuntu"
-
-    - name: Update using yum
-      yum:  update_cache=yes
-      when: ansible_os_family == "RedHat"
 
     - name: Install Perequisite
       shell: pip install awscli --ignore-installed six
